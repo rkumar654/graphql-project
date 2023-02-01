@@ -1,0 +1,28 @@
+input Project {
+   id: String
+   name: String
+   owner: String
+   techinalLead: String
+   teamLead: String
+   noOfResouces: Int
+   startDate: String
+   endDate: String
+}
+type ProjectResponse {
+   id: String
+   name: String
+   owner: String
+   techinalLead: String
+   teamLead: String
+   noOfResouces: Int
+   startDate: String
+   endDate: String
+}
+extend type Mutation{
+ createProject(project :Project):ProjectResponse
+}
+
+extend type Query{
+project(id:String) :ProjectResponse
+}
+

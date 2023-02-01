@@ -1,0 +1,20 @@
+type Employee{
+  id: ID!
+  empName: String
+  emailId: String
+  role: String
+  projectId: String
+  stack: String
+}
+type Query{
+employees(count: Int) : [Employee]
+employee(id: ID) :Employee
+employeeByName(empName: String) :[Employee]
+} 
+
+type Mutation{
+ save(empName: String!,emailId:String!, role:String!, projectId:String,stack: String):Employee
+}
+
+
+
